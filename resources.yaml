@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: home-credit-model
+spec:
+  type: LoadBalancer
+  selector:
+    app: home-credit-model
+  ports:
+  - port: 9050
+    targetPort: 9050
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home-credit-model
+  labels:
+    app: home-credit-model
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: home-credit-model
+  template:
+    metadata:
+      labels:
+        app: home-credit-model
+    spec:
+      containers:
+      - name: home-credit-model
+        image: us-central1-docker.pkg.dev/GOOGLE_PROJECT/home-credit-repo/home-credit-model:latest
