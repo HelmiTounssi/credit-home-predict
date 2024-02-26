@@ -8,8 +8,8 @@ spec:
   selector:
     app: home-credit-model
   ports:
-  - port: 9050
-    targetPort: 9050
+  - port: 8090
+    targetPort: 8090
 ---
 apiVersion: apps/v1
 kind: Deployment
