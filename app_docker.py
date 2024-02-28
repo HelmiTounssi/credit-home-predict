@@ -11,7 +11,7 @@ import mlflow
 import logging
 import os
 #mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")
-mlflow.set_tracking_uri("http://user:vIT1nT9znV@35.225.21.194")
+mlflow.set_tracking_uri("http://user:bH6nCGpKZK@34.27.22.29/")
 # Set up logging
 log_format = "%(asctime)s [%(levelname)s] %(message)s"
 logging.basicConfig(level=logging.INFO, format=log_format)
